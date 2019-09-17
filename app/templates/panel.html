@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{web_title}}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+      <nav class="navbar is-transparent">
+          <div class="navbar-brand">
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        
+          <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item" href="{{base_url}}">
+                Blog
+              </a>
+            </div>
+          </div>
+        </nav>
+  <section class="section">
+    <div class="container">
+      <div class="section">
+        <div class="container">
+          <form action="{{base_url}}/upload" method="POST">
+            <div class="field">
+              <label class="label">Blog Post Title</label>
+              <div class="control">
+                <input class="input" type="text" name="t" placeholder="My Blog Post">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Blog Contents</label>
+              <div class="control">
+                <textarea class="textarea" rows=10 placeholder="Lorum ipsum del...." name="c"></textarea>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Secret Key</label>
+              <div class="control">
+                <input class="input" type="password" name="s" placeholder="shhh">
+              </div>
+            </div>
+            <div class="field">
+              <button class="button is-info" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </body>
+  <script src="assets/js/burger.js"></script>
+</html>
